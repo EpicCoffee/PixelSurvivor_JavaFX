@@ -147,7 +147,6 @@ public class SpaceInvaderController {
     public ArrayList<EnemyShip> checkWhatToSpawn() {
 
         ArrayList<EnemyShip> combinedEnemies;
-        //int[] spawnPoints = {1, 6, 16, 36, 37, 56, 76, 77, 116, 156, 216};
         int currentLvl = gameModel.getLevel();
         if (currentLvl == 2) {
             gameModel.getPlayerModel().changeToBossWeapon();

@@ -1,0 +1,206 @@
+Jasmine söderberg : 95jassod
+Isabelle Romhagen : isabelleromhagen
+Mattias Frigren : mattiasfrigren
+Ludvig Lundin : epiccoffee
+Khazar Mehraban : 81khameh
+
+
+clean the code mattiasfrigren 2020-01-15 13:26
+comment out labeles epiccoffee 2020-01-15 09:01
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-15 08:56
+Tweaked positions 2 isabelleromhagen 2020-01-15 07:49
+Stopped backgroundmusic at lobby. epiccoffee 2020-01-14 21:49
+Edited comments epiccoffee 2020-01-14 20:14
+Tweaked positions isabelleromhagen 2020-01-14 20:05
+Added option to turn off soundtrack. Fixed button colors and fonts. isabelleromhagen 2020-01-14 18:18
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-14 17:13
+Merge remote-tracking branch 'origin/master' epiccoffee 2020-01-14 17:11
+Fixed bug with default player ship at play again. epiccoffee 2020-01-14 17:03
+Added option to turn off soundtrack. Fixed button colors and fonts. isabelleromhagen 2020-01-14 15:29
+made variabels private presentable state 91matfri 2020-01-14 13:24
+Merge remote-tracking branch 'origin/master' 91matfri 2020-01-14 13:14
+made variabels private 91matfri 2020-01-14 13:07
+Merge remote-tracking branch 'origin/master' epiccoffee 2020-01-14 13:07
+Added coloredships fixed nuke meteor bug. epiccoffee 2020-01-14 13:04
+Javadoc finished. Soundtrack added. isabelleromhagen 2020-01-14 12:53
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-13 23:15
+Some more comments. isabelleromhagen 2020-01-13 23:13
+change gun and some constants EpicCoffee 2020-01-13 16:00
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2020-01-13 15:57
+made variabels private mattiasfrigren 2020-01-13 15:57
+Added coloredships fixed nuke meteor bug. EpicCoffee 2020-01-13 15:56
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2020-01-13 11:55
+Added trippel gun at level 2. epiccoffee 2020-01-13 11:49
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2020-01-13 11:26
+Boss weapon mattiasfrigren 2020-01-13 11:26
+Fixed bug in high score print. isabelleromhagen 2020-01-13 11:23
+playSound static. isabelleromhagen 2020-01-13 11:12
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-13 10:58
+Divided high score into two rows, added help image, started commenting with javadoc. isabelleromhagen 2020-01-13 10:36
+Added sounds to items. epiccoffee 2020-01-13 10:34
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master epiccoffee 2020-01-13 10:16
+Added max PlayerHP. Added nullcheck at meteor. Tweaked ult. epiccoffee 2020-01-13 10:16
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2020-01-13 10:11
+Boss weapon mattiasfrigren 2020-01-13 10:08
+Rework at level and spawningsystem. Added ulti and GUI. Added ship picker. epiccoffee 2020-01-11 16:21
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-10 10:54
+Changed subscene background isabelleromhagen 2020-01-10 10:53
+added heart class new background new Enemymovement mattiasfrigren 2020-01-10 10:29
+Text color changes isabelleromhagen 2020-01-08 15:47
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-08 15:38
+Cleaned up abit of code addet some Comments Fixed abit in the menu Fixed EnemyMovment Started on the boss mattiasfrigren 2020-01-08 15:31
+Small text and color changes isabelleromhagen 2020-01-08 15:31
+Cleaned up abit of code addet some Comments Fixed abit in the menu Fixed EnemyMovment Started on the boss mattiasfrigren 2020-01-08 15:27
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-07 15:21
+fixed enemyspawn for the whole level Reworked Meteor Cleaned up the Code abit 2.0 mattiasfrigren 2020-01-07 15:21
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2020-01-07 15:17
+fixed enemyspawn for the whole level Reworked Meteor Cleaned up the Code abit mattiasfrigren 2020-01-07 15:16
+Small text and color changes isabelleromhagen 2020-01-06 11:30
+Merge remote-tracking branch 'origin/master' Mattias Frigren 2019-12-30 18:42
+Changed the subscene background isabelleromhagen 2019-12-24 17:00
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-21 18:40
+Changed the subscene background isabelleromhagen 2019-12-21 18:40
+Added enemy spawning system based on score. epiccoffee 2019-12-20 04:16
+Use if sound rework. May want to look in to it again to make a break between bullet sounds. epiccoffee 2019-12-20 02:08
+minor fix with commented code. epiccoffee 2019-12-20 01:47
+Fixed resetFunction/play again button. epiccoffee 2019-12-20 01:45
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master mattiasfrigren 2019-12-16 15:55
+change metodtypes correct mattiasfrigren 2019-12-16 15:54
+Refactored ingamemodel changed UI. New enemy spawn fuction. EpicCoffee 2019-12-16 15:54
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-16 13:50
+change metodtypes correct mattiasfrigren 2019-12-16 13:50
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-16 13:44
+added back to menu button on death sub scene, added exit sub scene for close button isabelleromhagen 2019-12-16 13:44
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-16 11:41
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-16 11:41
+added back to menu button on death sub scene, added exit sub scene for close button isabelleromhagen 2019-12-16 11:40
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-16 10:20
+change metodtypes correct mattiasfrigren 2019-12-16 10:20
+Changed mainmenu image. added alt. inGameBackgound image to resources 81khameh 2019-12-15 21:43
+Merge remote-tracking branch 'origin/master' EpicCoffee 2019-12-13 15:44
+Updated to make highscore show in game. EpicCoffee 2019-12-13 15:44
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-13 15:38
+change metodtypes correct mattiasfrigren 2019-12-13 15:37
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-13 15:35
+updated database highscore to work. isabelleromhagen 2019-12-13 15:35
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-13 14:42
+Meteor added. not finshed but on the way, and added speedboost on Shift button merged everthing togheter so it fits and works good mattiasfrigren 2019-12-13 14:42
+changed back to local db isabelleromhagen 2019-12-13 13:36
+Meteor added. not finshed but on the way, and added speedboost on Shift button merged everthing togheter so it fits and works good mattiasfrigren 2019-12-13 13:08
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-13 09:12
+Added credits text. Added highscore in game. Added sound on or off. Added top10 highscore. epiccoffee 2019-12-12 19:37
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-12 16:05
+fixed strings in viewmenu 81khameh 2019-12-12 16:04
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-12 15:50
+Addes img to resources 81khameh 2019-12-12 15:48
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master mattiasfrigren 2019-12-12 15:43
+Meteor added. not finshed but on the way, and added speedboost on Shift button merged everthing togheter so it fits and works good mattiasfrigren 2019-12-12 15:43
+Merge remote-tracking branch 'origin/master' 81khameh 2019-12-12 15:20
+Changes in menuView //TODO fix the exit submenu 81khameh 2019-12-12 15:12
+yes/no option on exit sub scene and enabled buttons isabelleromhagen 2019-12-12 15:04
+GameOverSubSceneBackground 81khameh 2019-12-12 11:02
+GameOverSubSceneBackground 81khameh 2019-12-12 09:49
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-11 10:28
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader kaptenPrice 2019-12-11 10:28
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-11 10:27
+Added exit subscene isabelleromhagen 2019-12-11 10:26
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader kaptenPrice 2019-12-11 10:19
+Changed subscene Image changed fontcolor in menu changed kaptenPrice 2019-12-11 10:16
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-11 10:14
+Added another background // Jasmine 95jassod 2019-12-11 10:13
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master mattiasfrigren 2019-12-11 09:24
+Meteor added. not finshed but on the way, and added speedboost on Shift button merged everthing togheter so it fits and works good mattiasfrigren 2019-12-11 09:24
+Separated entries to database from showing high score isabelleromhagen 2019-12-10 23:02
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-10 22:33
+refactored Constants 81khameh 2019-12-10 17:33
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader 81khameh 2019-12-10 17:12
+Added start menu scene and bind buttons to event. Added reset game. 81khameh 2019-12-10 16:55
+Meteor added. not finshed but on the way, and added speedboost on Shift button merged everthing togheter so it fits and works good mattiasfrigren 2019-12-10 14:04
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master mattiasfrigren 2019-12-10 13:58
+Meteor added. not finshed but on the way, and added speedboost on Shift button mattiasfrigren 2019-12-10 13:47
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-10 13:04
+Separated entries to database from showing high score isabelleromhagen 2019-12-10 13:03
+Added comments in inGameModel to easier find stuff. Also change to make bullets hit wings of the ship epiccoffee 2019-12-10 12:09
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-06 09:56
+Added listener on save score button, name is now printed along with the score isabelleromhagen 2019-12-06 09:53
+Commmited with no changes kaptenPrice 2019-12-04 14:53
+Merge remote-tracking branch 'origin/master' kaptenPrice 2019-12-04 14:41
+Merge remote-tracking branch 'origin/master' SoundEffect solved # Conflicts: #	src/view/SpaceInvaderInGameView.java mattiasfrigren 2019-12-04 14:39
+Commmited with no changes kaptenPrice 2019-12-04 14:34
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master kaptenPrice 2019-12-04 13:54
+Commmited with no changes kaptenPrice 2019-12-04 13:49
+Merge remote-tracking branch 'origin/master' blabla # Conflicts: #	src/view/SpaceInvaderInGameView.java mattiasfrigren 2019-12-04 13:43
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master mattiasfrigren 2019-12-04 13:22
+Update 1.1.3 Added save score event listener and reset game listener. epiccoffee 2019-12-04 13:21
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master mattiasfrigren 2019-12-04 13:10
+Merge remote-tracking branch 'origin/master' blabla # Conflicts: #	src/view/SpaceInvaderInGameView.java mattiasfrigren 2019-12-04 13:05
+Update 1.1.3 Added save score event listener and reset game listener. epiccoffee 2019-12-04 13:03
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master epiccoffee 2019-12-04 12:16
+Update 1.1.2 Created some movement for the enemy epiccoffee 2019-12-04 12:12
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-03 13:54
++Added .waw files to resources 81khameh 2019-12-03 13:51
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-12-03 13:49
+Added database, sorts by score and prints top 10 in terminal isabelleromhagen 2019-12-03 13:41
++Added .waw files to resources 81khameh 2019-12-03 13:27
+Soundeffect laser added to playershooting in game model soundEffect added to enemyDead method 81khameh 2019-12-03 13:20
+Merge remote-tracking branch 'origin/master' 81khameh 2019-12-03 10:49
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-12-02 09:41
+Merge remote-tracking branch 'origin/master' blabla # Conflicts: #	src/view/SpaceInvaderInGameView.java mattiasfrigren 2019-12-02 09:38
+Update 1.1.2 Added Update at life images to sync with your current player life in model. Added on death screen. epiccoffee 2019-12-01 13:43
+Merge remote-tracking branch 'origin/master' 81khameh 2019-11-28 18:53
+Added enemies 81khameh 2019-11-28 18:52
+Update 1.1.1 Added Shooting to enemies. Added life to ships. Added deaths to enemies and player. Added points. Added points view. Added player heart/life view. epiccoffee 2019-11-28 16:18
+Update 1.1.1 Added Shooting to enemies. Added life to ships. Added deaths to enemies and player. Added points. Added points view. Added player heart/life view. epiccoffee 2019-11-28 16:17
+Merge remote-tracking branch 'origin/master' EpicCoffee 2019-11-27 16:14
+Update 1.1.0 Updated collision EpicCoffee 2019-11-27 16:13
+Update 1.1.0 Updated collision EpicCoffee 2019-11-27 16:09
+Merge remote-tracking branch 'origin/master' 81khameh 2019-11-27 15:59
+Added enemies 81khameh 2019-11-27 15:58
+Update 1.1.0 Updated collision EpicCoffee 2019-11-27 15:50
+Merge branch 'master' of https://bitbucket.org/Jasminesoderberg/game-spaceinvader/src/master EpicCoffee 2019-11-27 15:31
+Update 1.1.0 Updated to laserGun function to center the bullet. EpicCoffee 2019-11-27 15:30
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-11-27 14:39
+Added move up and down isabelleromhagen 2019-11-27 14:39
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-11-27 14:37
+Merge remote-tracking branch 'origin/master' isabelleromhagen 2019-11-27 14:37
+Added move up and down isabelleromhagen 2019-11-27 14:36
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-11-27 14:29
+Merge remote-tracking branch 'origin/master' 81khameh 2019-11-27 14:27
+Added enemies 81khameh 2019-11-27 14:12
+Merge remote-tracking branch 'origin/master' 95jassod 2019-11-27 14:08
+Added left and right movement 95jassod 2019-11-27 14:04
+Merge remote-tracking branch 'origin/master' EpicCoffee 2019-11-27 13:48
+Update 1.1.0 Updated to laserGun function to center the bullet. EpicCoffee 2019-11-27 13:47
+Merge remote-tracking branch 'origin/master' blabla # Conflicts: #	src/view/SpaceInvaderInGameView.java mattiasfrigren 2019-11-27 12:10
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-11-27 12:09
+added background and move background mattiasfrigren 2019-11-27 12:03
+Update 1.1.0 Updated to laserGun function to center the bullet. EpicCoffee 2019-11-27 12:00
+Update 1.1.0 Updated to laserGun function to center the bullet. EpicCoffee 2019-11-27 11:58
+Merge remote-tracking branch 'origin/master' EpicCoffee 2019-11-27 11:52
+Update 1.0.9 Added collision detection and rework bullets. EpicCoffee 2019-11-27 11:38
+Merge remote-tracking branch 'origin/master' mattiasfrigren 2019-11-27 11:35
+added background and move background mattiasfrigren 2019-11-27 11:34
+Merge remote-tracking branch 'origin/master' 81khameh 2019-11-26 15:31
+Update 1.0.8 added gitIgonore epiccoffee 2019-11-25 23:01
+Merge remote-tracking branch 'origin/master' kaptenPrice 2019-11-25 13:49
+Update 1.0.8 added gitIgonore EpicCoffee 2019-11-25 13:44
+Update 1.0.8 added gitIgonore EpicCoffee 2019-11-25 13:42
+Added .gitignore kaptenPrice 2019-11-25 13:37
+Update 1.0.7 Fixed remove bullets when out of screen. EpicCoffee 2019-11-25 13:16
+Update 1.0.7 Fixed remove bullets when out of screen. EpicCoffee 2019-11-25 13:14
+Version med skott som rör sig och tomma enemey metoder kaptenPrice 2019-11-25 13:08
+Version med skott som rör sig och tomma enemey metoder kaptenPrice 2019-11-25 13:07
+Update 1.0.7 Fixed remove bullets when out of screen. EpicCoffee 2019-11-25 13:06
+Update 1.0.7 Fixed remove bullets when out of screen. epiccoffee 2019-11-23 15:26
+Update 1.0.6 AddedShooting EpicCoffee 2019-11-22 13:31
+Update 1.0.5 epiccoffee 2019-11-21 16:00
+Update 1.0.4 epiccoffee 2019-11-21 15:18
+Update 1.0.4 epiccoffee 2019-11-21 11:11
+Update 1.0.3 OnScreenItems - kinda done Ship - kinda done PlayerShip - kinda done Weapons - kinda done LaserGun - kinda done LaserBullet - kinda done IBullet - done Constants - updated SpaceInvaderModel - started epiccoffee 2019-11-19 16:02
+Update 1.0.2 epiccoffee 2019-11-19 08:50
+Update 1.0.2 epiccoffee 2019-11-19 08:49
+Update 1.0.01 EpicCoffee 2019-11-18 14:39
+Update 1.0 EpicCoffee 2019-11-18 14:25
+tjäna mattiasfrigren 2019-11-18 14:31
+Andra upplaga 95jassod 2019-11-18 13:29
+Första upplaga 95jassod 2019-11-16 18:26

@@ -48,11 +48,11 @@ public class Constants {
     public final static String enemyBigBossUrl = "model/resources/enemy1_5.png";
     public final static double enemyBigBossHeight = SCREENHEIGHT*0.18;
     public final static double enemyBigBossWidth = SCREENWIDTH*0.12;
-    public final static double enemyBigBossMovmentSpeed = SCREENHEIGHT*0.004;
+    public final static double enemyBigBossMovmentSpeed = SCREENHEIGHT*0.005;
     public final static double enemyBigBossStartPosX = SCREENWIDTH*0.1;
     public final static double enemyBigBossStartPosY = SCREENHEIGHT -(SCREENHEIGHT+45);
     public final static int enemyBigBossLifes = 100;
-    public final static double enemyBigBossShootingInterval = 40;
+    public final static double enemyBigBossShootingInterval = 33;
 
     public final static String inGameBackGroundImage = "model/resources/inGameBackground.png";
 
