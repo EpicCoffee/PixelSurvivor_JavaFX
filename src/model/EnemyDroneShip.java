@@ -16,9 +16,9 @@ public class EnemyDroneShip extends EnemyShip {
      * Creates a Laser gun and gets direction and interval.
      */
     public EnemyDroneShip() {
-        super(Constants.enemyDroneShipUrl,Constants.enemyDroneShipStartPosX,Constants.enemyDroneShipStartPosY,Constants.enemyDroneShipHeight
-        ,Constants.enemyDroneShipWidth,Constants.enemyDroneShipMovmentSpeed,true,Constants.enemyDroneShipLifes);
-        setWeapons(new LaserGun(true,(int) Constants.enemyDroneShipLaserGunShootingInterval,this));
+        super(Constants.ENEMY_DRONE_SHIP_URL,Constants.ENEMY_DRONE_SHIP_START_POS_X,Constants.ENEMY_DRONE_SHIP_START_POS_Y,Constants.ENEMY_DRONE_SHIP_HEIGHT
+        ,Constants.ENEMY_DRONE_SHIP_WIDTH,Constants.ENEMY_DRONE_SHIP_MOVEMENT_SPEED,true,Constants.ENEMY_DRONE_SHIP_LIVES);
+        setWeapons(new LaserGun(true,(int) Constants.ENEMY_DRONE_SHIP_LASER_GUN_SHOOTING_INTERVAL,this));
 
     }
 

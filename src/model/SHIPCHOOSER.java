@@ -9,10 +9,10 @@ package model;
 
 public enum SHIPCHOOSER {
 
-    GREY(Constants.playerShipURL),
-    GREEN(Constants.greenPlayerShipURL),
-    BLUE(Constants.bluePlayerShipURL),
-    RED(Constants.redPlayerShipURL);
+    GREY(Constants.PLAYER_SHIP_URL),
+    GREEN(Constants.GREEN_PLAYER_SHIP_URL),
+    BLUE(Constants.BLUE_PLAYER_SHIP_URL),
+    RED(Constants.RED_PLAYER_SHIP_URL);
 
     private String urlShip;
 

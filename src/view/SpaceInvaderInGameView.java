@@ -46,9 +46,9 @@ public class SpaceInvaderInGameView implements IViewState {
     private ImageView hpUpHeart;
 
     private ImageView playerImage;
-    private ImageView ultImage = new ImageView(Constants.ultImageUrl);
-    private ImageView firstBackGroundImage = new ImageView(Constants.inGameBackGroundImage);
-    private ImageView secondBackGroundImage = new ImageView(Constants.inGameBackGroundImage);
+    private ImageView ultImage = new ImageView(Constants.ULTI_IMAGE_URL);
+    private ImageView firstBackGroundImage = new ImageView(Constants.IN_GAME_BACK_GROUND_IMAGE);
+    private ImageView secondBackGroundImage = new ImageView(Constants.IN_GAME_BACK_GROUND_IMAGE);
     private ArrayList<ImageView> playerLifeImages;
     private Label pointsLabel;
 
@@ -93,7 +93,7 @@ public class SpaceInvaderInGameView implements IViewState {
 
         model = InGameModel.getGameModel();
         gamePane = new AnchorPane();
-        gameScene = new Scene(gamePane, Constants.SCREENWIDTH, Constants.SCREENHEIGHT);
+        gameScene = new Scene(gamePane, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
         controller = SpaceInvaderController.getController();
         initializeLevelToPane();
         initializeGameListener();
@@ -183,7 +183,7 @@ public class SpaceInvaderInGameView implements IViewState {
             ultbar.setProgress(1);
         }
         else {
-            double percentsOfUlt = (double) model.getPlayerModel().getUltCounter()/Constants.ultReadyAt;
+            double percentsOfUlt = (double) model.getPlayerModel().getUltCounter()/Constants.ULT_READY_AT;
             ultbar.setProgress(percentsOfUlt);
         }
 
@@ -197,7 +197,7 @@ public class SpaceInvaderInGameView implements IViewState {
         if (controller.checkIfPlayerIsUlting()){
             initializeUlt();
         }
-        if (ultTimer >= Constants.maxFramesToShowUlt){
+        if (ultTimer >= Constants.MAX_FRAMES_TO_SHOW_ULT){
             removeUlt();
         }
     }
@@ -407,10 +407,10 @@ public class SpaceInvaderInGameView implements IViewState {
     private void updateBackGround() {
         firstBackGroundImage.setY(firstBackGroundImage.getY() + 6);
         secondBackGroundImage.setY(secondBackGroundImage.getY() + 6);
-        if (firstBackGroundImage.getY() >= Constants.SCREENHEIGHT) {
+        if (firstBackGroundImage.getY() >= Constants.SCREEN_HEIGHT) {
             firstBackGroundImage.setY(-34780);
         }
-        if (secondBackGroundImage.getY() >= Constants.SCREENHEIGHT) {
+        if (secondBackGroundImage.getY() >= Constants.SCREEN_HEIGHT) {
             secondBackGroundImage.setY(-34780);
         }
     }
@@ -443,13 +443,13 @@ public class SpaceInvaderInGameView implements IViewState {
         pointsLabel.setTextFill(Color.ORANGERED);
         pointsLabel.setPrefWidth(130); // TODO CHANGE TO CONSTANTS
         pointsLabel.setPrefHeight(50);
-        BackgroundImage backgroundImage = new BackgroundImage(new Image(Constants.pointLabelBackGround, 130,50,false,true), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
+        BackgroundImage backgroundImage = new BackgroundImage(new Image(Constants.POINT_LABEL_BACK_GROUND, 130,50,false,true), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
         //pointsLabel.setBackground(new Background(backgroundImage));
         pointsLabel.setAlignment(Pos.CENTER_LEFT);
         pointsLabel.setPadding(new Insets(10,10,10,10));
         pointsLabel.setFont(Font.font("Verdana", 15));
         pointsLabel.setLayoutX(0);
-        pointsLabel.setLayoutY(Constants.SCREENHEIGHT * 0.92);
+        pointsLabel.setLayoutY(Constants.SCREEN_HEIGHT * 0.92);
         gamePane.getChildren().add(pointsLabel);
     }
 
@@ -468,8 +468,8 @@ public class SpaceInvaderInGameView implements IViewState {
         highScoreLabel.setAlignment(Pos.CENTER_LEFT);
         highScoreLabel.setPadding(new Insets(10,10,10,10));
         highScoreLabel.setFont(Font.font("Verdana", 15));
-        highScoreLabel.setLayoutX((Constants.SCREENWIDTH * 0.5) - (highScoreLabel.getPrefWidth()/2));
-        highScoreLabel.setLayoutY(Constants.SCREENHEIGHT * 0.92);
+        highScoreLabel.setLayoutX((Constants.SCREEN_WIDTH * 0.5) - (highScoreLabel.getPrefWidth()/2));
+        highScoreLabel.setLayoutY(Constants.SCREEN_HEIGHT * 0.92);
         gamePane.getChildren().add(highScoreLabel);
     }
 
@@ -499,7 +499,7 @@ public class SpaceInvaderInGameView implements IViewState {
     public void initializeMeteor() {
         if (model.getModelMeteor() !=null) {
           // Meteor meteorModel = new Meteor();
-            meteorImage = new ImageView((new Image(Constants.meteorImage)));
+            meteorImage = new ImageView((new Image(Constants.METEOR_IMAGE)));
             meteorImage.setX(model.getModelMeteor().getItemCoordX());
             meteorImage.setY(model.getModelMeteor().getItemCoordY());
             addToGamePane(meteorImage);
@@ -510,12 +510,12 @@ public class SpaceInvaderInGameView implements IViewState {
      * Creates heart power up, sets position, preserve ratio, width and height, adds it to pane.
      */
     public void initializeHpUpHeart() {
-        hpUpHeart = new ImageView(new Image(Constants.heartURL));
+        hpUpHeart = new ImageView(new Image(Constants.HEART_URL));
         hpUpHeart.setX(model.getHeartHpUp().getItemCoordX());
         hpUpHeart.setY(model.getHeartHpUp().getItemCoordY());
         hpUpHeart.setPreserveRatio(true);
-        hpUpHeart.setFitHeight(Constants.heartHeight);
-        hpUpHeart.setFitWidth(Constants.heartWidth);
+        hpUpHeart.setFitHeight(Constants.HEART_HEIGHT);
+        hpUpHeart.setFitWidth(Constants.HEART_WIDTH);
         addToGamePane(hpUpHeart);
     }
 
@@ -523,8 +523,8 @@ public class SpaceInvaderInGameView implements IViewState {
      * Sets position for ult bar and adds it to the pane.
      */
     private void initializeProgressBar() {
-        ultbar.setLayoutX(Constants.SCREENWIDTH * 0.72);
-        ultbar.setLayoutY(Constants.SCREENHEIGHT * 0.96);
+        ultbar.setLayoutX(Constants.SCREEN_WIDTH * 0.72);
+        ultbar.setLayoutY(Constants.SCREEN_HEIGHT * 0.96);
 
         addToGamePane(ultbar);
     }
@@ -554,15 +554,15 @@ public class SpaceInvaderInGameView implements IViewState {
         String enemyURL;
         for (int i = 0; i < enemyModelList.size(); i++) {
             EnemyShip enemyModel = enemyModelList.get(i);
-            if (enemyModel.getImageUrl().equals(Constants.enemyDroneShipUrl)) {
-            enemyURL = Constants.enemyDroneShipUrl;
+            if (enemyModel.getImageUrl().equals(Constants.ENEMY_DRONE_SHIP_URL)) {
+            enemyURL = Constants.ENEMY_DRONE_SHIP_URL;
             }
-           else if (enemyModel.getImageUrl().equals(Constants.enemyBigBossUrl)){
-                enemyURL = Constants.enemyBigBossUrl;
+           else if (enemyModel.getImageUrl().equals(Constants.ENEMY_BIG_BOSS_URL)){
+                enemyURL = Constants.ENEMY_BIG_BOSS_URL;
                 ImageView enemyImage = new ImageView(new Image(enemyURL));
                 enemyImage.setPreserveRatio(true);
-                enemyImage.setFitWidth(Constants.enemyBigBossWidth);
-                enemyImage.setFitHeight(Constants.enemyBigBossHeight);
+                enemyImage.setFitWidth(Constants.ENEMY_BIG_BOSS_WIDTH);
+                enemyImage.setFitHeight(Constants.ENEMY_BIG_BOSS_HEIGHT);
                 enemyImage.setX(enemyModel.getItemCoordX());
                 enemyImage.setY(enemyModel.getItemCoordY());
                 enemyImage.setRotate(180);
@@ -571,14 +571,14 @@ public class SpaceInvaderInGameView implements IViewState {
                 break;
             }
             else {
-                enemyURL = Constants.enemyShipURL;
+                enemyURL = Constants.ENEMY_SHIP_URL;
             }
             ImageView enemyImage = new ImageView(new Image(enemyURL));
             enemyImage.setX(enemyModel.getItemCoordX());
             enemyImage.setY(enemyModel.getItemCoordY());
             enemyImage.setPreserveRatio(true);
-            enemyImage.setFitWidth(Constants.enemyShipWidth);
-            enemyImage.setFitHeight(Constants.enemyShipHeight);
+            enemyImage.setFitWidth(Constants.ENEMY_SHIP_WIDTH);
+            enemyImage.setFitHeight(Constants.ENEMY_SHIP_HEIGHT);
             enemyImage.setRotate(180);
             addToGamePane(enemyImage);
             enemiesImageList.add(enemyImage);
@@ -608,16 +608,16 @@ public class SpaceInvaderInGameView implements IViewState {
      */
     public void initializeDeathSubScene(boolean saveClicked) {
 
-        deathSubScene = new SubScene(new AnchorPane(),Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45);
+        deathSubScene = new SubScene(new AnchorPane(),Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45);
 
-        BackgroundImage image = new BackgroundImage(new Image(Constants.gameOverSubSceneBackground,Constants.SCREENWIDTH * 0.45,Constants.SCREENHEIGHT * 0.45, false, true),
+        BackgroundImage image = new BackgroundImage(new Image(Constants.GAME_OVER_SUB_SCENE_BACKGROUND,Constants.SCREEN_WIDTH * 0.45,Constants.SCREEN_HEIGHT * 0.45, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
 
         AnchorPane deathAnchor = (AnchorPane) deathSubScene.getRoot();
         deathAnchor.setBackground(new Background(image));
 
-        deathSubScene.setLayoutX(Constants.SCREENWIDTH/2 - deathSubScene.getWidth()/2);
-        deathSubScene.setLayoutY(Constants.SCREENHEIGHT/2 - deathSubScene.getHeight()/2);
+        deathSubScene.setLayoutX(Constants.SCREEN_WIDTH /2 - deathSubScene.getWidth()/2);
+        deathSubScene.setLayoutY(Constants.SCREEN_HEIGHT /2 - deathSubScene.getHeight()/2);
 
         Text playerDeadText = new Text("GAME OVER");
         playerDeadText.setX(deathAnchor.getWidth() * 0.27);
@@ -710,11 +710,11 @@ public class SpaceInvaderInGameView implements IViewState {
      */
     private void createPlayerLifeImage(int lifeNumber) {
         ImageView playerLifeImage = new ImageView(model.getPlayerModel().getImageUrl());
-        playerLifeImage.setLayoutX(Constants.heartStartX + (lifeNumber * Constants.heartWidth));
-        playerLifeImage.setLayoutY(Constants.heartStartY);
+        playerLifeImage.setLayoutX(Constants.HEART_START_X + (lifeNumber * Constants.HEART_WIDTH));
+        playerLifeImage.setLayoutY(Constants.HEART_START_Y);
         playerLifeImage.setPreserveRatio(true);
-        playerLifeImage.setFitWidth(Constants.heartWidth);
-        playerLifeImage.setFitHeight(Constants.heartHeight);
+        playerLifeImage.setFitWidth(Constants.HEART_WIDTH);
+        playerLifeImage.setFitHeight(Constants.HEART_HEIGHT);
 
         playerLifeImages.add(playerLifeImage);
         addToGamePane(playerLifeImage);
@@ -731,7 +731,7 @@ public class SpaceInvaderInGameView implements IViewState {
         ImageView imageBullet;
         System.out.println("bullet image created at x: " + itemBullet.getItemCoordX() + " y: " + itemBullet.getItemCoordY());
         if (itemBullet.isFacingPlayer()) {
-            imageBullet = new ImageView(Constants.enemyBulletUrl);
+            imageBullet = new ImageView(Constants.ENEMY_BULLET_URL);
             imageBullet.setRotate(180);
         }
         else {

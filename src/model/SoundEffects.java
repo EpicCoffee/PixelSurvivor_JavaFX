@@ -35,7 +35,7 @@ public class SoundEffects {
     public static void loopSoundtrack() {
         if (SpaceInvaderController.getController().isSoundOn()) {
             try {
-                File musicPath = new File(Constants.Soundtrack);
+                File musicPath = new File(Constants.SOUNDTRACK);
 
                 if (musicPath.exists()) {
                     AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);

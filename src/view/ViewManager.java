@@ -1,8 +1,6 @@
 package view;
 
 import controller.SpaceInvaderButtonListener;
-import controller.SpaceInvaderController;
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.SubScene;
 import javafx.scene.control.Button;
@@ -16,9 +14,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Constants;
-import model.InGameModel;
-
-import java.util.Scanner;
 
 /**
  * This class handles everything that is visible in game play.
@@ -79,7 +74,7 @@ public class ViewManager {
         gameState = SpaceInvaderMenuView.getSpaceInvaderMenuView();
         mainScene = ((SpaceInvaderMenuView) gameState).getMenuScene();
         mainStage = stage;
-        mainStage.setTitle("SpaceInvader");
+        mainStage.setTitle("PixelSurvivor");
         mainStage.setScene(mainScene);
         mainStage.setResizable(false);
         mainStage.sizeToScene();
@@ -126,19 +121,19 @@ public class ViewManager {
      * Closes sub scene on no, closes program on yes.
      */
     public void initializeExitSubScene(){
-        double subSceneWidth = Constants.SCREENWIDTH * 0.45;
-        double subSceneHeight = Constants.SCREENHEIGHT * 0.45;
+        double subSceneWidth = Constants.SCREEN_WIDTH * 0.45;
+        double subSceneHeight = Constants.SCREEN_HEIGHT * 0.45;
 
         AnchorPane exitAnchor = new AnchorPane();
         exitScene = new SubScene(exitAnchor, subSceneWidth, subSceneHeight);
 
-        BackgroundImage image = new BackgroundImage(new Image(Constants.gameOverSubSceneBackground, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45, false, true),
+        BackgroundImage image = new BackgroundImage(new Image(Constants.GAME_OVER_SUB_SCENE_BACKGROUND, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
 
         exitAnchor.setBackground(new Background(image));
 
-        exitScene.setLayoutX(Constants.SCREENWIDTH/3);
-        exitScene.setLayoutY(Constants.SCREENHEIGHT * 0.5 - exitScene.getHeight()/2);
+        exitScene.setLayoutX(Constants.SCREEN_WIDTH /3);
+        exitScene.setLayoutY(Constants.SCREEN_HEIGHT * 0.5 - exitScene.getHeight()/2);
 
         Text exitText = new Text("Are you sure you want to quit?");
         exitText.setX(subSceneWidth/8);
@@ -153,7 +148,7 @@ public class ViewManager {
         yesButton.setFont(Font.font("Verdana", 20));
         yesButton.setBackground(SpaceInvaderMenuView.getSpaceInvaderMenuView().buttonOnReleasedBackground);
         yesButton.setTextFill(Color.color(0.75, 0.9, 0.9));
-        yesButton.setPrefWidth(Constants.menuButtonWidth*0.7);
+        yesButton.setPrefWidth(Constants.MENU_BUTTON_WIDTH *0.7);
         exitAnchor.getChildren().add(yesButton);
 
         Button noButton = new Button("no");
@@ -162,11 +157,11 @@ public class ViewManager {
         noButton.setFont(Font.font("Verdana", 20));
         noButton.setBackground(SpaceInvaderMenuView.getSpaceInvaderMenuView().buttonOnReleasedBackground);
         noButton.setTextFill(Color.color(0.75, 0.9, 0.9));
-        noButton.setPrefWidth(Constants.menuButtonWidth*0.7);
+        noButton.setPrefWidth(Constants.MENU_BUTTON_WIDTH *0.7);
         exitAnchor.getChildren().add(noButton);
 
         if (mainScene.equals(SpaceInvaderInGameView.getGameScene())) {
-            exitScene.setLayoutX(Constants.SCREENWIDTH / 2 - exitScene.getWidth()/2);
+            exitScene.setLayoutX(Constants.SCREEN_WIDTH / 2 - exitScene.getWidth()/2);
         }
 
         AnchorPane currentPane = (AnchorPane) mainScene.getRoot();

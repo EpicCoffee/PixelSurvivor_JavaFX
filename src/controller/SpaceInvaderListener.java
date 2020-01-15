@@ -1,14 +1,10 @@
 package controller;
 
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import model.Constants;
 import model.InGameModel;
-import model.LaserGun;
 
 /**
  * Handles all events for pressed and released keys.
@@ -57,7 +53,7 @@ public class SpaceInvaderListener implements EventHandler<KeyEvent> {
                 SpaceInvaderController.getController().setMovingDown(true);
             }
             if (event.getCode() ==KeyCode.SHIFT)
-                InGameModel.getGameModel().getPlayerModel().setMovementSpeed(Constants.SCREENHEIGHT*0.016);
+                InGameModel.getGameModel().getPlayerModel().setMovementSpeed(Constants.SCREEN_HEIGHT *0.016);
             if (event.getCode() == KeyCode.ESCAPE) {
                 SpaceInvaderController.getController().pauseGame();
             }
@@ -82,7 +78,7 @@ public class SpaceInvaderListener implements EventHandler<KeyEvent> {
                 SpaceInvaderController.getController().setMovingDown(false);
             }
             if (event.getCode() == KeyCode.SHIFT) {
-                InGameModel.getGameModel().getPlayerModel().setMovementSpeed(Constants.playerShipMovementSpeed);
+                InGameModel.getGameModel().getPlayerModel().setMovementSpeed(Constants.PLAYER_SHIP_MOVEMENT_SPEED);
             }
             if (event.getCode() == KeyCode.X) {
                 SpaceInvaderController.getController().setUltIsPressed(false);

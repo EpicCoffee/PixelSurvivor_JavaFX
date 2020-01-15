@@ -10,8 +10,8 @@ package model;
 public class Meteor extends OnScreenItems {
 
     public Meteor() {
-        super(Constants.meteorImage,Constants.spawnPointMeteor,0,Constants.meteorHeight,
-                Constants.meteorWidth,Constants.meteorMovementSpeed,true);
+        super(Constants.METEOR_IMAGE,Constants.SPAWN_POINT_METEOR,0,Constants.METEOR_HEIGHT,
+                Constants.METEOR_WIDTH,Constants.METEOR_MOVEMENT_SPEED,true);
     }
 
 }

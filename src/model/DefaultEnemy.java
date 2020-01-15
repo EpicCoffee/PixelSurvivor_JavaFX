@@ -15,10 +15,10 @@ public class DefaultEnemy extends EnemyShip {
      * Creates a Laser gun and gets direction and interval.
      */
     public DefaultEnemy() {
-        super(Constants.enemyShipURL,Constants.enemyShipStartPosX,Constants.enemyShipStartPosY,
-                Constants.enemyShipHeight,Constants.enemyShipWidth,Constants.enemyShipMovementSpeed,true, Constants.enemyLifes);
+        super(Constants.ENEMY_SHIP_URL,Constants.ENEMY_SHIP_START_POS_X,Constants.ENEMY_SHIP_START_POS_Y,
+                Constants.ENEMY_SHIP_HEIGHT,Constants.ENEMY_SHIP_WIDTH,Constants.ENEMY_SHIP_MOVEMENT_SPEED,true, Constants.ENEMY_LIVES);
 
-        setWeapons(new LaserGun(true, (int)Constants.enemyLaserGunShootingInterval,this));
+        setWeapons(new LaserGun(true, (int)Constants.ENEMY_LASER_GUN_SHOOTING_INTERVAL,this));
 
     }
 }

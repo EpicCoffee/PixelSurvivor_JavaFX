@@ -37,9 +37,9 @@ public class SpaceInvaderMenuView implements IViewState {
     private Button button;
     private static SubScene currentSubScene;
 
-    BackgroundImage buttonOnclickImg = new BackgroundImage(new Image(Constants.buttonBgClickedURL), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+    BackgroundImage buttonOnclickImg = new BackgroundImage(new Image(Constants.BUTTON_BG_CLICKED_URL), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
     Background buttonOnOnclickBackground = new Background(buttonOnclickImg);
-    BackgroundImage buttonOnReleasedImage = new BackgroundImage(new Image(Constants.buttonBgURL), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+    BackgroundImage buttonOnReleasedImage = new BackgroundImage(new Image(Constants.BUTTON_BG_URL), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
     Background buttonOnReleasedBackground = new Background(buttonOnReleasedImage);
 
     private static Scene menuScene;
@@ -79,9 +79,9 @@ public class SpaceInvaderMenuView implements IViewState {
      */
     private SpaceInvaderMenuView() {
         menuPane = new AnchorPane();
-        menuScene = new Scene(menuPane, Constants.SCREENWIDTH, Constants.SCREENHEIGHT);
+        menuScene = new Scene(menuPane, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
 
-        BackgroundImage bootImage = new BackgroundImage(new Image(Constants.gameBootSceneBackGround, Constants.SCREENWIDTH, Constants.SCREENHEIGHT, false, true),
+        BackgroundImage bootImage = new BackgroundImage(new Image(Constants.GAME_BOOT_SCENE_BACK_GROUND, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, null);
 
         menuPane.setBackground(new Background(bootImage));
@@ -97,7 +97,7 @@ public class SpaceInvaderMenuView implements IViewState {
     private void createButtonToList() {
         String[] buttonList = {"Play", "HighScore", "Settings", "Help", "Credits", "Exit"};
         for (int i = 1; i < buttonList.length + 1; i++) {
-            createButton(buttonList[i - 1], Constants.menuButtonStartingXPos, Constants.menuButtonStartingYPos * (i * 0.2));
+            createButton(buttonList[i - 1], Constants.MENU_BUTTON_STARTING_X_POS, Constants.MENU_BUTTON_STARTING_Y_POS * (i * 0.2));
         }
         menuPane.getChildren().addAll(buttonArrayList);
     }
@@ -113,15 +113,15 @@ public class SpaceInvaderMenuView implements IViewState {
         closeCurrentSubScene();
 
         AnchorPane scoreAnchor = new AnchorPane();
-        currentSubScene = new SubScene(scoreAnchor, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45);
+        currentSubScene = new SubScene(scoreAnchor, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45);
 
-        BackgroundImage image = new BackgroundImage(new Image(Constants.gameOverSubSceneBackground, Constants.SCREENWIDTH * 0.6, Constants.SCREENHEIGHT * 0.6, false, true),
+        BackgroundImage image = new BackgroundImage(new Image(Constants.GAME_OVER_SUB_SCENE_BACKGROUND, Constants.SCREEN_WIDTH * 0.6, Constants.SCREEN_HEIGHT * 0.6, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
 
         scoreAnchor.setBackground(new Background(image));
         currentSubScene.setId("highScoreScene");
-        currentSubScene.setLayoutX(Constants.SCREENWIDTH / 3);
-        currentSubScene.setLayoutY(Constants.SCREENHEIGHT * 0.5 - currentSubScene.getHeight()/2);
+        currentSubScene.setLayoutX(Constants.SCREEN_WIDTH / 3);
+        currentSubScene.setLayoutY(Constants.SCREEN_HEIGHT * 0.5 - currentSubScene.getHeight()/2);
 
         Text text = new Text("High Score"); //TODO COLOR SET on text in the subscene
         text.setX(scoreAnchor.getWidth() /2.8);
@@ -180,15 +180,15 @@ public class SpaceInvaderMenuView implements IViewState {
         closeCurrentSubScene();
 
         AnchorPane creditAnchor = new AnchorPane();
-        currentSubScene = new SubScene(creditAnchor, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45);
+        currentSubScene = new SubScene(creditAnchor, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45);
 
-        BackgroundImage image = new BackgroundImage(new Image(Constants.gameOverSubSceneBackground, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45, false, true),
+        BackgroundImage image = new BackgroundImage(new Image(Constants.GAME_OVER_SUB_SCENE_BACKGROUND, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
 
         creditAnchor.setBackground(new Background(image));
         currentSubScene.setId("creditScene");
-        currentSubScene.setLayoutX(Constants.SCREENWIDTH / 3);
-        currentSubScene.setLayoutY(Constants.SCREENHEIGHT * 0.5 - currentSubScene.getHeight()/2);
+        currentSubScene.setLayoutX(Constants.SCREEN_WIDTH / 3);
+        currentSubScene.setLayoutY(Constants.SCREEN_HEIGHT * 0.5 - currentSubScene.getHeight()/2);
 
         Text text = new Text("Credits"); //TODO se highScore
         text.setX(creditAnchor.getWidth() /2.5);
@@ -221,15 +221,15 @@ public class SpaceInvaderMenuView implements IViewState {
         closeCurrentSubScene();
 
         AnchorPane settingsAnchor = new AnchorPane();
-        currentSubScene = new SubScene(settingsAnchor, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45);
+        currentSubScene = new SubScene(settingsAnchor, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45);
 
-        BackgroundImage image = new BackgroundImage(new Image(Constants.gameOverSubSceneBackground, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45, false, true),
+        BackgroundImage image = new BackgroundImage(new Image(Constants.GAME_OVER_SUB_SCENE_BACKGROUND, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
 
         settingsAnchor.setBackground(new Background(image));
         currentSubScene.setId("settingScene");
-        currentSubScene.setLayoutX(Constants.SCREENWIDTH / 3);
-        currentSubScene.setLayoutY(Constants.SCREENHEIGHT * 0.5 - currentSubScene.getHeight()/2);
+        currentSubScene.setLayoutX(Constants.SCREEN_WIDTH / 3);
+        currentSubScene.setLayoutY(Constants.SCREEN_HEIGHT * 0.5 - currentSubScene.getHeight()/2);
 
         Text text = new Text("Settings"); //TODO COLOR SET
         text.setX(settingsAnchor.getWidth() / 2.5);
@@ -262,15 +262,15 @@ public class SpaceInvaderMenuView implements IViewState {
         closeCurrentSubScene();
 
         AnchorPane helpAnchor = new AnchorPane();
-        currentSubScene = new SubScene(helpAnchor, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45);
+        currentSubScene = new SubScene(helpAnchor, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45);
 
-        BackgroundImage image = new BackgroundImage(new Image(Constants.helpBackGround, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45, false, true),
+        BackgroundImage image = new BackgroundImage(new Image(Constants.HELP_BACK_GROUND, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
 
         helpAnchor.setBackground(new Background(image));
         currentSubScene.setId("helpScene");
-        currentSubScene.setLayoutX(Constants.SCREENWIDTH / 3);
-        currentSubScene.setLayoutY(Constants.SCREENHEIGHT * 0.5 - currentSubScene.getHeight()/2);
+        currentSubScene.setLayoutX(Constants.SCREEN_WIDTH / 3);
+        currentSubScene.setLayoutY(Constants.SCREEN_HEIGHT * 0.5 - currentSubScene.getHeight()/2);
 
         Text text = new Text("Help"); //TODO COLOR SET
         text.setX(helpAnchor.getWidth() / 2.5);
@@ -286,23 +286,23 @@ public class SpaceInvaderMenuView implements IViewState {
         closeCurrentSubScene();
 
         AnchorPane helpAnchor = new AnchorPane();
-        currentSubScene = new SubScene(helpAnchor, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45);
+        currentSubScene = new SubScene(helpAnchor, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45);
 
-        BackgroundImage image = new BackgroundImage(new Image(Constants.gameOverSubSceneBackground, Constants.SCREENWIDTH * 0.45, Constants.SCREENHEIGHT * 0.45, false, true),
+        BackgroundImage image = new BackgroundImage(new Image(Constants.GAME_OVER_SUB_SCENE_BACKGROUND, Constants.SCREEN_WIDTH * 0.45, Constants.SCREEN_HEIGHT * 0.45, false, true),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
 
         helpAnchor.setBackground(new Background(image));
         currentSubScene.setId("shipChoose");
-        currentSubScene.setLayoutX(Constants.SCREENWIDTH / 3);
-        currentSubScene.setLayoutY(Constants.SCREENHEIGHT * 0.5 - currentSubScene.getHeight()/2);
+        currentSubScene.setLayoutX(Constants.SCREEN_WIDTH / 3);
+        currentSubScene.setLayoutY(Constants.SCREEN_HEIGHT * 0.5 - currentSubScene.getHeight()/2);
 
         Button startGame = new Button("Start");
-        startGame.setPrefWidth(Constants.SCREENWIDTH * 0.1);
+        startGame.setPrefWidth(Constants.SCREEN_WIDTH * 0.1);
         startGame.setTextFill(Color.color(0.75, 0.9, 0.9));
         startGame.setBackground(buttonOnReleasedBackground);
         startGame.setFont(Font.font("Verdana", 20));
         startGame.setLayoutY(currentSubScene.getHeight() * 0.8);
-        startGame.setLayoutX((currentSubScene.getWidth() * 0.5) - Constants.SCREENWIDTH * 0.05);
+        startGame.setLayoutX((currentSubScene.getWidth() * 0.5) - Constants.SCREEN_WIDTH * 0.05);
         startGame.addEventFilter(MouseEvent.MOUSE_CLICKED, SpaceInvaderButtonListener.getButtonListener().startGame);
 
         helpAnchor.getChildren().add(createShipsToChoose());
@@ -340,7 +340,7 @@ public class SpaceInvaderMenuView implements IViewState {
         button.setLayoutY(y);
         button.setFont(Font.font("Verdana", 20));
         button.setTextFill(Color.color(0.75, 0.9, 0.9));
-        button.setPrefWidth(Constants.menuButtonWidth);
+        button.setPrefWidth(Constants.MENU_BUTTON_WIDTH);
         button.setBackground(buttonOnReleasedBackground);
         buttonArrayList.add(button);
     }

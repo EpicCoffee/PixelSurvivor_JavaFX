@@ -16,9 +16,9 @@ public class EnemyBigBoss extends EnemyShip {
      * Creates a Laser gun and gets direction and interval.
      */
     public EnemyBigBoss() {
-        super(Constants.enemyBigBossUrl,Constants.enemyBigBossStartPosX, Constants.enemyBigBossStartPosY,
-                Constants.enemyBigBossHeight,Constants.enemyBigBossWidth,Constants.enemyBigBossMovmentSpeed, true,Constants.enemyBigBossLifes);
-        setWeapons(new BossWeapon(true, (int)Constants.enemyBigBossShootingInterval,this));
+        super(Constants.ENEMY_BIG_BOSS_URL,Constants.ENEMY_BIG_BOSS_START_POS_X, Constants.ENEMY_BIG_BOSS_START_POS_Y,
+                Constants.ENEMY_BIG_BOSS_HEIGHT,Constants.ENEMY_BIG_BOSS_WIDTH,Constants.ENEMY_BIG_BOSS_MOVEMENT_SPEED, true,Constants.ENEMY_BIG_BOSS_LIVES);
+        setWeapons(new BossWeapon(true, (int)Constants.ENEMY_BIG_BOSS_SHOOTING_INTERVAL,this));
 
     }
 

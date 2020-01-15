@@ -1,8 +1,6 @@
 package model;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * This class handles all info on the models in the game.
@@ -21,7 +19,7 @@ public class InGameModel {
     private Meteor modelMeteor;
     private int points = 0;
     private int level = 1;
-    private String myShipURL = Constants.playerShipURL;
+    private String myShipURL = Constants.PLAYER_SHIP_URL;
 
     /////////************** Getter and setters ***********************
 
@@ -75,7 +73,7 @@ public class InGameModel {
     }
 
     private InGameModel() {
-        playerModel = new PlayerShip(Constants.playerShipURL);
+        playerModel = new PlayerShip(Constants.PLAYER_SHIP_URL);
     }
 
     public PlayerShip getPlayerModel() {

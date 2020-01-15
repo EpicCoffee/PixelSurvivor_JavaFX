@@ -17,7 +17,7 @@ public class LaserBullet extends OnScreenItems implements IBullet {
      * @param isFacingPlayer direction
      */
     public LaserBullet(double itemCoordX, double itemCoordY, boolean isFacingPlayer) {
-        super(Constants.laserBulletURL, itemCoordX, itemCoordY, Constants.laserBulletHeight, Constants.laserBulletWidth, Constants.laserBulletMovementSpeed, isFacingPlayer);
+        super(Constants.LASER_BULLET_URL, itemCoordX, itemCoordY, Constants.LASER_BULLET_HEIGHT, Constants.LASER_BULLET_WIDTH, Constants.LASER_BULLET_MOVEMENT_SPEED, isFacingPlayer);
     }
 
 }

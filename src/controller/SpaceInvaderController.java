@@ -206,7 +206,7 @@ public class SpaceInvaderController {
      */
     private void spawnMeteor() {
         gameModel.setModelMeteor(new Meteor());
-        gameModel.getModelMeteor().setItemCoordX((Math.random() * (Constants.SCREENWIDTH - 150)) + 50 );
+        gameModel.getModelMeteor().setItemCoordX((Math.random() * (Constants.SCREEN_WIDTH - 150)) + 50 );
         gameModel.getModelMeteor().setItemCoordY((Math.random() * -600) - 200);
         SpaceInvaderInGameView.getGameView().initializeMeteor();
     }
@@ -232,7 +232,7 @@ public class SpaceInvaderController {
             enemyShip = new EnemyBigBoss();
         }
 
-        double startXPos = Constants.SCREENWIDTH/2 - (enemyShip.getItemWidth()/2);
+        double startXPos = Constants.SCREEN_WIDTH /2 - (enemyShip.getItemWidth()/2);
         boolean toRight = true;
         double currentYPos = -50;
         double currentXPos = startXPos;
@@ -258,7 +258,7 @@ public class SpaceInvaderController {
             }
             else {
                 if (toRight) {
-                    currentDistanceFromCenter += Constants.enemySpawnSpread;
+                    currentDistanceFromCenter += Constants.ENEMY_SPAWN_SPREAD;
                     currentXPos = startXPos + currentDistanceFromCenter;
                     toRight = false;
                     enemyShip.setMoveStateRightLeft(false);
@@ -284,7 +284,7 @@ public class SpaceInvaderController {
      * Create new heart power up and set its position.
      */
     public void createHpUpHeart() {
-        SoundEffects.playSound(Constants.POWERUPSOUNDURL);
+        SoundEffects.playSound(Constants.POWER_UP_SOUND_URL);
         gameModel.setHeartHpUp(new HpUp());
         gameModel.getHeartHpUp().setItemCoordY(gameModel.getModelMeteor().getItemCoordY());
         gameModel.getHeartHpUp().setItemCoordX(gameModel.getModelMeteor().getItemCoordX());
@@ -305,7 +305,7 @@ public class SpaceInvaderController {
              }
             else if (gameModel.getPlayerModel().getItemWidth() / 5 + gameModel.getHeartHpUp().getItemWidth() / 5 > distanceBetween(gameModel.getHeartHpUp(), gameModel.getPlayerModel())) {
                 if (gameModel.getPlayerModel().getLifes() < 3) {
-                    SoundEffects.playSound(Constants.POWERUPSOUNDURL);
+                    SoundEffects.playSound(Constants.POWER_UP_SOUND_URL);
                     gameModel.getPlayerModel().setLifes(gameModel.getPlayerModel().getLifes() + 1);
                 }
                 else {
@@ -319,7 +319,7 @@ public class SpaceInvaderController {
     public void moveMeteorModel() {
         if (gameModel.getModelMeteor() !=null) {
             gameModel.getModelMeteor().moveUp();
-            if (gameModel.getModelMeteor().getItemCoordY() >= Constants.SCREENHEIGHT+300) {
+            if (gameModel.getModelMeteor().getItemCoordY() >= Constants.SCREEN_HEIGHT +300) {
                 gameModel.setModelMeteor(null);
                 System.out.println("meteor removed");
             }
@@ -333,25 +333,25 @@ public class SpaceInvaderController {
         ArrayList<EnemyShip> enemyShips = gameModel.getEnemyModelList();
         for (int i = 0; i < enemyShips.size() ; i++) {
 
-            if (enemyShips.get(i).getItemCoordY() <= Constants.SCREENHEIGHT / 2 && enemyShips.get(i).isMoveStateUpDown()==true){
+            if (enemyShips.get(i).getItemCoordY() <= Constants.SCREEN_HEIGHT / 2 && enemyShips.get(i).isMoveStateUpDown()==true){
                 enemyShips.get(i).moveUp();
-                if (enemyShips.get(i).getItemCoordY() >= Constants.SCREENHEIGHT/2) {
+                if (enemyShips.get(i).getItemCoordY() >= Constants.SCREEN_HEIGHT /2) {
                     enemyShips.get(i).setMoveStateUpDown(false);
                 }
             }
-            if (enemyShips.get(i).getItemCoordY() < Constants.SCREENHEIGHT && enemyShips.get(i).isMoveStateUpDown() ==false) {
+            if (enemyShips.get(i).getItemCoordY() < Constants.SCREEN_HEIGHT && enemyShips.get(i).isMoveStateUpDown() ==false) {
                 enemyShips.get(i).moveDown();
                 if (enemyShips.get(i).getItemCoordY() <= 0) {
                     enemyShips.get(i).setMoveStateUpDown(true);
                 }
             }
-            if (enemyShips.get(i).getItemCoordX() <= (Constants.SCREENWIDTH-30) && enemyShips.get(i).isMoveStateRightLeft()==true){
+            if (enemyShips.get(i).getItemCoordX() <= (Constants.SCREEN_WIDTH -30) && enemyShips.get(i).isMoveStateRightLeft()==true){
                 enemyShips.get(i).moveLeft();
-                if (enemyShips.get(i).getItemCoordX() >= Constants.SCREENWIDTH-30) {
+                if (enemyShips.get(i).getItemCoordX() >= Constants.SCREEN_WIDTH -30) {
                     enemyShips.get(i).setMoveStateRightLeft(false);
                 }
             }
-            if (enemyShips.get(i).getItemCoordX() < Constants.SCREENWIDTH  && enemyShips.get(i).isMoveStateRightLeft()==false){
+            if (enemyShips.get(i).getItemCoordX() < Constants.SCREEN_WIDTH && enemyShips.get(i).isMoveStateRightLeft()==false){
                 enemyShips.get(i).moveRight();
                 if (enemyShips.get(i).getItemCoordX() <=0) {
                     enemyShips.get(i).setMoveStateRightLeft(true);
@@ -387,7 +387,7 @@ public class SpaceInvaderController {
     public IBullet checkIfPlayerIsShooting() {
         if (isShooting) {
             IBullet currentBullet = gameModel.getPlayerModel().performShootingAction();
-            new SoundEffects().playSound(Constants.LASERSOUNDURL1);//PlayerShoot soundEffect.KM
+            new SoundEffects().playSound(Constants.LASERSOUNDURL_1);//PlayerShoot soundEffect.KM
             if (currentBullet != null) {
                 gameModel.addBullets(currentBullet);
                 System.out.println("bullet added to list");
@@ -406,7 +406,7 @@ public class SpaceInvaderController {
     public boolean checkIfPlayerIsUlting() {
         if (ultIsPressed && gameModel.getPlayerModel().IsUltReady()) {
             ultActivated();
-            new SoundEffects().playSound(Constants.ultSoundUrl);
+            new SoundEffects().playSound(Constants.ULT_SOUND_URL);
             return true;
         }
         return false;
@@ -425,7 +425,7 @@ public class SpaceInvaderController {
      * Moves player right if isMovingRight is true and border is not reached.
      */
     private void checkIfPlayerIsMovingRight() {
-        if (isMovingRight && gameModel.getPlayerModel().getItemCoordX() < Constants.SCREENWIDTH - Constants.playerShipWidth) {
+        if (isMovingRight && gameModel.getPlayerModel().getItemCoordX() < Constants.SCREEN_WIDTH - Constants.PLAYER_SHIP_WIDTH) {
             gameModel.getPlayerModel().moveRight();
         }
     }
@@ -434,7 +434,7 @@ public class SpaceInvaderController {
      * Moves player up if isMovingUp is true and border is not reached.
      */
     private void checkIfPlayerIsMovingUp() {
-        if (isMovingUp && gameModel.getPlayerModel().getItemCoordY() > (Constants.SCREENHEIGHT / 2)+(gameModel.getPlayerModel().getItemHeight()/2)) {
+        if (isMovingUp && gameModel.getPlayerModel().getItemCoordY() > (Constants.SCREEN_HEIGHT / 2)+(gameModel.getPlayerModel().getItemHeight()/2)) {
             gameModel.getPlayerModel().moveUp();
         }
     }
@@ -443,7 +443,7 @@ public class SpaceInvaderController {
      * Moves player down if isMovingDown is true and border is not reached.
      */
     private void checkIfPlayIsMovingDown() {
-        if (isMovingDown && gameModel.getPlayerModel().getItemCoordY() < (Constants.SCREENHEIGHT * 0.92) - Constants.playerShipHeight) {
+        if (isMovingDown && gameModel.getPlayerModel().getItemCoordY() < (Constants.SCREEN_HEIGHT * 0.92) - Constants.PLAYER_SHIP_HEIGHT) {
             gameModel.getPlayerModel().moveDown();
         }
     }
@@ -476,12 +476,12 @@ public class SpaceInvaderController {
      * @return position
      */
     private boolean checkIfOutOfScreen(double x, double y) {
-        return y > Constants.SCREENHEIGHT + 50 || x > Constants.SCREENWIDTH + 50 || y < -50 || x < -50;
+        return y > Constants.SCREEN_HEIGHT + 50 || x > Constants.SCREEN_WIDTH + 50 || y < -50 || x < -50;
     }
 
 
     private boolean checkIfOutOfScreen(double x, double y, double width) {
-        return y > Constants.SCREENHEIGHT + width || x > Constants.SCREENWIDTH + width || y < -width || x < -width;
+        return y > Constants.SCREEN_HEIGHT + width || x > Constants.SCREEN_WIDTH + width || y < -width || x < -width;
     }
 
     /**
@@ -579,7 +579,7 @@ public class SpaceInvaderController {
                 if (!ultIsPressed) {
                     gameModel.getPlayerModel().addToUltCounter();
                 }
-                new SoundEffects().playSound(Constants.enemyExplosion); //Enemy deadSouncEffect.KM
+                new SoundEffects().playSound(Constants.ENEMY_EXPLOSION); //Enemy deadSouncEffect.KM
             }
         }
         return deadEnemyList;
@@ -600,7 +600,7 @@ public class SpaceInvaderController {
      */
     private void ultActivated() {
         for (EnemyShip enemyShip : gameModel.getEnemyModelList()) {
-            enemyShip.looseLife(Constants.ultiDamage);
+            enemyShip.looseLife(Constants.ULTI_DAMAGE);
         }
         gameModel.setModelMeteor(null);
         gameModel.getPlayerModel().resetUltCounter();

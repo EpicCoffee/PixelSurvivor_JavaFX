@@ -19,9 +19,9 @@ public class PlayerShip extends Ship {
      */
     public PlayerShip(String playerShipURL) {
 
-        super(playerShipURL, Constants.playerShipStartPosX, Constants.playerShipStartPosY, Constants.playerShipHeight, Constants.playerShipWidth, Constants.playerShipMovementSpeed, false, Constants.playerLifes);
+        super(playerShipURL, Constants.PLAYER_SHIP_START_POS_X, Constants.PLAYER_SHIP_START_POS_Y, Constants.PLAYER_SHIP_HEIGHT, Constants.PLAYER_SHIP_WIDTH, Constants.PLAYER_SHIP_MOVEMENT_SPEED, false, Constants.PLAYER_LIVES);
 
-        setWeapons(new LaserGun(false, (int)Constants.laserBulletShootInterval, this));
+        setWeapons(new LaserGun(false, (int)Constants.LASER_BULLET_SHOOT_INTERVAL, this));
     }
 
     public int getUltCounter() {
@@ -29,7 +29,7 @@ public class PlayerShip extends Ship {
     }
 
     public boolean IsUltReady() {
-        return ultCounter >= Constants.ultReadyAt;
+        return ultCounter >= Constants.ULT_READY_AT;
     }
 
     public void addToUltCounter() {
@@ -42,7 +42,7 @@ public class PlayerShip extends Ship {
 
     public void changeToBossWeapon() {
         if (!hasBossWeapon) {
-            setWeapons(new BossWeapon(false, (int)Constants.laserBulletShootInterval, this));
+            setWeapons(new BossWeapon(false, (int)Constants.LASER_BULLET_SHOOT_INTERVAL, this));
             hasBossWeapon = true;
         }
     }
