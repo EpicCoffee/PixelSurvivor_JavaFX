@@ -27,7 +27,7 @@ import java.util.ArrayList;
  * This class handles everything that is visible in game play.
  * Implements IViewState.
  *
- * @author Isabelle Romhagen, Ludvig Lundin, Mattias Frigren
+ * @author Isabelle Romhagen, Ludvig Lundin, Mattias Frigren, Khazar Mehraban
  * @version 1.2
  */
 public class SpaceInvaderInGameView implements IViewState {
@@ -461,7 +461,7 @@ public class SpaceInvaderInGameView implements IViewState {
         String currentHighscore = Integer.toString(HighScore.getHighScore().getBestHighestScore());
         Label highScoreLabel = new Label("Highscore: " + currentHighscore);
         highScoreLabel.setTextFill(Color.ORANGERED);
-        highScoreLabel.setPrefWidth(130); // TODO CHANGE TO CONSTANTS
+        highScoreLabel.setPrefWidth(200); // TODO CHANGE TO CONSTANTS
         highScoreLabel.setPrefHeight(50);
         //BackgroundImage backgroundImage = new BackgroundImage(new Image(Constants.pointLabelBackGround, 130,50,false,true), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, null);
         //highScoreLabel.setBackground(new Background(backgroundImage));

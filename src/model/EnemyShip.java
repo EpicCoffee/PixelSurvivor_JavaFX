@@ -4,7 +4,7 @@ package model;
  * This class defines what an enemy ship of any kind should contain.
  * It is a child of Ship.
  *
- * @author Mattias Frigren
+ * @author Mattias Frigren, Khazar Mehraban
  * @version 1.2
  */
 

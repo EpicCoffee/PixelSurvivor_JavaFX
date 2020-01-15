@@ -4,7 +4,7 @@ package model;
  * This class defines what a ship of any kind should contain.
  * It is a child of OnScreenItems.
  *
- * @author Ludvig Lundin
+ * @author Isabelle Romhagen, Ludvig Lundin, Mattias Frigren, Khazar Mehraban
  * @version 1.2
  */
 public class Ship extends OnScreenItems{

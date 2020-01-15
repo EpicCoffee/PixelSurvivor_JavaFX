@@ -10,7 +10,7 @@ package model;
 
 public abstract class Weapons {
 
-    protected boolean isFacingPlayer; /* Move to Constants? */
+    protected boolean isFacingPlayer;
     protected int readyToShoot;
     protected int shootInterval;
     protected Ship theShip;
